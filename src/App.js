@@ -24,6 +24,8 @@ function App() {
 
 // src/App.js (actualización en la función handleAddTask)
 
+// src/App.js (actualización en la función handleAddTask)
+
 const handleAddTask = taskData => {
     const newTask = {
         id: Date.now(),
@@ -32,6 +34,7 @@ const handleAddTask = taskData => {
     };
     setTasks([...tasks, newTask]);
 };
+
 
 
     return (

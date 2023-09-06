@@ -14,6 +14,8 @@ function Task({ task, onToggleComplete, onDelete }) {
                 <span className={task.completed ? 'text-muted ms-2' : 'ms-2'}>{task.title}</span>
                 {task.label && <span className="badge bg-secondary ms-2">{task.label}</span>}
                 <span className="badge bg-primary ms-2">{task.priority}</span>
+                {task.dueDate && <span className="text-muted ms-2">Vence: {task.dueDate}</span>}
+                {task.reminder && <span className="badge bg-warning ms-2">Recordatorio</span>}
             </div>
             <button className="btn btn-danger btn-sm" onClick={onDelete}>Eliminar</button>
         </div>
