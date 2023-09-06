@@ -51,11 +51,11 @@ function TaskInput({ onAddTask }) {
                     className="form-control me-2"
                 />
                 <div className="form-check">
-                    <input 
-                        type="checkbox" 
-                        checked={reminder} 
-                        onChange={e => setReminder(e.target.checked)} 
-                        className="form-check-input" 
+                    <input
+                        type="checkbox"
+                        checked={reminder}
+                        onChange={e => setReminder(e.target.checked)}
+                        className="form-check-input"
                         id="reminderCheckbox"
                     />
                     <label className="form-check-label" htmlFor="reminderCheckbox">Recordatorio</label>
