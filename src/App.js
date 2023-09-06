@@ -1,6 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
 // src/App.js
 
 import React, { useState } from 'react';
@@ -25,14 +22,17 @@ function App() {
         setTasks(updatedTasks);
     };
 
-    const handleAddTask = title => {
-        const newTask = {
-            id: Date.now(),
-            title,
-            completed: false
-        };
-        setTasks([...tasks, newTask]);
+// src/App.js (actualización en la función handleAddTask)
+
+const handleAddTask = taskData => {
+    const newTask = {
+        id: Date.now(),
+        completed: false,
+        ...taskData
     };
+    setTasks([...tasks, newTask]);
+};
+
 
     return (
         <div className="container mt-4">

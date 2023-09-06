@@ -1,4 +1,4 @@
-// src/components/Task.js
+// src/components/Task.js (actualización)
 
 import React from 'react';
 
@@ -12,6 +12,8 @@ function Task({ task, onToggleComplete, onDelete }) {
                     onChange={onToggleComplete}
                 />
                 <span className={task.completed ? 'text-muted ms-2' : 'ms-2'}>{task.title}</span>
+                {task.label && <span className="badge bg-secondary ms-2">{task.label}</span>}
+                <span className="badge bg-primary ms-2">{task.priority}</span>
             </div>
             <button className="btn btn-danger btn-sm" onClick={onDelete}>Eliminar</button>
         </div>
